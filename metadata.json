@@ -1,0 +1,5 @@
+{
+  "name": "Work Dimension Calculator",
+  "description": "專業的作品尺寸計算工具，根據長*寬*高尺寸自動進行材積定價與分組管理。",
+  "requestFramePermissions": []
+}
