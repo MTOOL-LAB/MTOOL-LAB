@@ -309,17 +309,17 @@ const App: React.FC = () => {
         </div>
 
         {/* Offline Backup Control Panel */}
-        <div id="offline-control-panel" className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 shadow-xl animate-in fade-in duration-300">
+        <div id="offline-control-panel" className="bg-white/5 border border-white/10 rounded-2xl p-3 md:p-4 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 md:gap-4 shadow-xl animate-in fade-in duration-300">
           <div className="flex-1">
-            <h3 className="text-md font-black text-white flex items-center gap-2">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h3 className="text-xs sm:text-sm font-black text-white flex items-center gap-1.5">
+              <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
               {t.offlineSectionTitle}
             </h3>
-            <p className="text-xs text-slate-400 mt-1 font-medium">{t.offlineSectionDesc}</p>
+            <p className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 font-medium leading-tight">{t.offlineSectionDesc}</p>
           </div>
-          <div className="flex flex-wrap gap-3 w-full md:w-auto">
+          <div className="flex flex-wrap gap-2 w-full md:w-auto">
             <input 
               type="file" 
               ref={offlineFileInputRef} 
@@ -329,27 +329,27 @@ const App: React.FC = () => {
             />
             <button 
               onClick={() => offlineFileInputRef.current?.click()}
-              className="flex-1 md:flex-none px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-black rounded-xl border border-white/20 transition-all text-xs flex items-center justify-center gap-2 animate-all"
+              className="flex-1 md:flex-none px-3 py-1.5 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 text-white font-black rounded-xl border border-white/20 transition-all text-[10px] sm:text-xs flex items-center justify-center gap-1.5 animate-all"
             >
-              <svg className="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
               </svg>
               {t.importJsl}
             </button>
             <button 
               onClick={() => exportToJsl(getFullBackupState(), t)}
-              className="flex-1 md:flex-none px-5 py-2.5 bg-blue-950/40 hover:bg-blue-900 border border-blue-500/30 text-blue-200 font-black rounded-xl transition-all text-xs flex items-center justify-center gap-2"
+              className="flex-1 md:flex-none px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-950/40 hover:bg-blue-900 border border-blue-500/30 text-blue-200 font-black rounded-xl transition-all text-[10px] sm:text-xs flex items-center justify-center gap-1.5"
             >
-              <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
               </svg>
               {t.exportJsl}
             </button>
             <button 
               onClick={() => exportToOfflineHtml(getFullBackupState(), t)}
-              className="flex-1 md:flex-none px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl transition-all text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/10"
+              className="flex-1 md:flex-none px-3.5 py-1.5 sm:px-4 sm:py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl transition-all text-[10px] sm:text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-500/10"
             >
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
               {t.exportHtml}
